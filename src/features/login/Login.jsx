@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
 import './Login.scss'
+import { useDispatch, useSelector } from "react-redux"
+import { accessToken } from "./loginSlice"
 
 function Login() {
+  const signIn = useSelector((state) => state.token)
+  const dispatch = useDispatch()
+
   return (
     <div className="main bg-dark">
       <section className="sign-in-content">
@@ -21,7 +26,10 @@ function Login() {
             <label htmlFor="remember-me">Remember me</label>
           </div>
           <Link to="/user">
-            <button className="sign-in-button">
+            <button 
+              onClick={() => dispatch(accessToken())}
+              className="sign-in-button" 
+            >
               Sign-in
             </button>
           </Link>
