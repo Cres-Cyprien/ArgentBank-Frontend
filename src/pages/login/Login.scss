@@ -1,0 +1,51 @@
+.bg-dark {
+  background-color: #12002b;
+  padding-top: 1px;
+  padding-bottom: 289px;
+  .sign-in-content {
+    box-sizing: border-box;
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 47px;
+    padding: 2rem;
+  
+    .sign-in-icon {
+      font-size: 5rem;
+    }
+  
+    form {
+      .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 1rem;
+        label {
+          font-weight: bold;
+        }
+        input {
+          padding: 5px;
+          font-size: 1.2rem;
+        }
+      }
+      .input-remember {
+        display: flex;
+        label {
+          margin-left: 0.25rem;
+        }
+      }
+      .sign-in-button {
+        width: 100%;
+        padding: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        border: none;
+        background-color: #00bc77;
+        color: #fff;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
