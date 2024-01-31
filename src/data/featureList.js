@@ -1,4 +1,4 @@
-const commitmentList = [
+const featureList = [
   {
     id: "a2bC4dE",
     alt: "icon-chat",
@@ -19,4 +19,4 @@ const commitmentList = [
   },
 ]
 
-export default commitmentList
+export default featureList
