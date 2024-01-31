@@ -1,8 +1,13 @@
 import Account from "../../features/account/Account"
 import accountList from "../../data/accountList"
+import { useSelector } from "react-redux"
+import { selectCurrentToken } from "../auth/authSlice"
+
 import './User.scss'
 
 function User() {
+  const token = useSelector(selectCurrentToken)
+
   return(
     <div className="main bg-dark">
       <div className="header">

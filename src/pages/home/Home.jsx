@@ -1,5 +1,5 @@
-import Commitment from '../../features/commitment/Commitment'
-import commitmentList from '../../data/commitmentList'
+import Feature from '../../features/feature/Feature'
+import commitmentList from '../../data/featureList'
 import './Home.scss'
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
       <div className="features">
         {commitmentList.map(({ id, alt, title, text }) => (
           <div key={id}>
-            <Commitment src={`src/assets/${alt}.png`} alt={alt} title={title} text={text} />
+            <Feature src={`src/assets/${alt}.png`} alt={alt} title={title} text={text} />
           </div>
         ))}
       </div>

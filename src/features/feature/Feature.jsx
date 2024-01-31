@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import './Commitment.scss'
+import './Feature.scss'
 
-const Commitment = ({ id, alt, title, text }) => {
+const Feature = ({ id, alt, title, text }) => {
   return(
     <div  key={id} className="feature-item">
       <img src={`src/assets/${alt}.png`} alt={alt} className="feature-icon" />
@@ -11,4 +11,4 @@ const Commitment = ({ id, alt, title, text }) => {
   )
 }
 
-export default Commitment
+export default Feature
