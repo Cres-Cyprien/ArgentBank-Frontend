@@ -16,3 +16,11 @@ export const postLogin = async data => await post(LOGIN_URL, data)
     }
     return res.json()
   })
+
+  export const postProfile = (token) => fetch(PROFILE_URL, {
+    method: "POST",
+    headers: {
+      "Accept": "application/json",  
+      "Authorization": "Bearer " + token
+    }
+  }).then((response) => response.json())
