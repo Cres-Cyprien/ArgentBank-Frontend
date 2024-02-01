@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import './Header.scss'
 import { useSelector, useDispatch } from "react-redux"
-import { selectCurrentToken, logOut } from "../auth/authSlice"
+import { selectCurrentToken, selectCurrentFirstName, logOut } from "../auth/authSlice"
 
 function Header() {
   const token = useSelector(selectCurrentToken)
+  const firstName = useSelector(selectCurrentFirstName)
   const dispatch = useDispatch()
 
   return (
@@ -22,7 +23,7 @@ function Header() {
           <div className="main-nav-auth">
             <Link to="/user" className="main-nav-item">
               <i className="fa fa-user-circle"></i>
-              Tony
+              {firstName}
             </Link>
             <Link  to="/login" className="main-nav-item" onClick={() => dispatch(logOut())}>
               <i className="fa fa-sign-out"></i>
