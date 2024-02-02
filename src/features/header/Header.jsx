@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import './Header.scss'
 import { useSelector, useDispatch } from "react-redux"
-import { selectCurrentToken, selectCurrentFirstName, logOut } from "../auth/authSlice"
+import { selectCurrentToken, logOut } from "../auth/authSlice"
+import { selectCurrentFirstName } from "../profile/profileSlice"
 
 function Header() {
   const token = useSelector(selectCurrentToken)
