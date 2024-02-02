@@ -10,6 +10,7 @@ import "./EditName.scss"
 function EditName() {
   const firstName = useSelector(selectCurrentFirstName)
   const lastName = useSelector(selectCurrentLastName)
+  const currentUserName = useSelector(selectCurrentUserName)
   const [userName, setUserName] = useState("")
   const token = useSelector(selectCurrentToken)
   const [showEdit, setShowEdit] = useState("")
@@ -22,16 +23,14 @@ function EditName() {
     const response = await fetch(PROFILE_URL, {
       method: "PUT",
       headers: {
-        "Accept": "application/json",  
+        "Content-Type": "application/json",  
         "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({userName})
     })
     if (response.ok) {
       const data = await response.json()
-      const username = data.body.userName
-      console.log(data)
-      dispatch(updateUserName(username))
+      dispatch(updateUserName(data.body.userName))
       setShowEdit(false)
     }
   }
@@ -48,7 +47,7 @@ function EditName() {
               <input 
                 type="text"
                 id="username"
-                defaultValue={selectCurrentUserName}
+                defaultValue={currentUserName}
                 onChange={(event) => setUserName(event.target.value)}
                 />
             </div>
@@ -73,7 +72,7 @@ function EditName() {
       </div>
     ) : (
       <div>
-        <h1>Welcome back<br />{userName}</h1>
+        <h1>Welcome back<br />{currentUserName}</h1>
         <button className="edit-button" onClick={open}>Edit Name</button>
       </div>
     )}
