@@ -1,5 +1,4 @@
 const LOGIN_URL = 'http://localhost:3001/api/v1/user/login'
-const PROFILE_URL = 'http://localhost:3001/api/v1/user/profile'
 
 const post = async (url, data) => fetch(url, {
   method: "POST",
