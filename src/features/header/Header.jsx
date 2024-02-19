@@ -28,7 +28,7 @@ function Header() {
               <i className="fa fa-user-circle"></i>
               {userName}
             </Link>
-            <Link  to="/login" className="main-nav-item" onClick={() => dispatch(logOut())}>
+            <Link  to="/" className="main-nav-item" onClick={() => dispatch(logOut())}>
               <i className="fa fa-sign-out"></i>
               Sign Out
             </Link>
