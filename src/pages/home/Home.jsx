@@ -17,7 +17,7 @@ function Home() {
       <div className="features">
         {commitmentList.map(({ id, alt, title, text }) => (
           <div key={id}>
-            <Feature src={`src/assets/${alt}.png`} alt={alt} title={title} text={text} />
+            <Feature src={`src/assets/${alt}.webp`} alt={alt} title={title} text={text} />
           </div>
         ))}
       </div>

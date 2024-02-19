@@ -8,25 +8,21 @@ import Footer from "../features/footer/Footer"
 import ProtectedRoute from "../features/protectedRoute/protectedRoute"
 import './App.scss'
 
-
 function App() {
-
   return (
-    <React.StrictMode>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />}/>
-          <Route path="/user" element={
-            <ProtectedRoute>
-            <User/>
-            </ProtectedRoute>
-          }/>
-        </Routes>
-        <Footer />
-      </Router>
-    </React.StrictMode>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/user" element={
+          <ProtectedRoute>
+            <User />
+          </ProtectedRoute>
+        } />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 
